@@ -6,6 +6,9 @@ import org.junit.*;
 import org.junit.rules.TestWatcher;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+// import org.openqa.selenium.remote.CapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -22,9 +25,10 @@ public class LaunchTest {
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability("platformName", "android");
-        capabilities.setCapability("deviceName", "ignored");
-        capabilities.setCapability("app", "/path/to/app.apk");
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 5X");
+        capabilities.setCapability(MobileCapabilityType.APP, "/Users/oliechan/Projects/Avicenna/spikes/Appium-AppCenter/app-release.apk");
 
         URL url = new URL("http://localhost:4723/wd/hub");
 
