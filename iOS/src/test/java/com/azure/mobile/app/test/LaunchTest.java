@@ -21,10 +21,11 @@ public class LaunchTest {
     @Before
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("deviceName", "iPhone 6");
-        capabilities.setCapability("app", "/path/to/app.app");
+				capabilities.setCapability("automationName", "XCUITest");
+				capabilities.setCapability("platformName", "iOS");
+				capabilities.setCapability("platformVersion", "13.3");
+        capabilities.setCapability("deviceName", "iPhone 11");
+        capabilities.setCapability("app", "/Users/oliechan/Projects/Avicenna/spikes/Appium-AppCenter/NavigationAppRelease.app");
 
         URL url = new URL("http://localhost:4723/wd/hub");
 
