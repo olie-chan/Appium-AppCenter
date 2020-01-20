@@ -5,9 +5,8 @@ import com.microsoft.appcenter.appium.EnhancedAndroidDriver;
 import org.junit.*;
 import org.junit.rules.TestWatcher;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-// import org.openqa.selenium.remote.CapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 import java.net.MalformedURLException;
